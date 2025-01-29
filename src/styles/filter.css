@@ -1,0 +1,43 @@
+.category-filter {
+  margin: 20px 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.category-filter label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
+
+.category-filter select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.category-filter select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.category-filter select option {
+  padding: 10px;
+  background-color: white;
+  color: #333;
+}
+
+.category-filter select option:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .category-filter select {
+    width: 100%;
+  }
+}

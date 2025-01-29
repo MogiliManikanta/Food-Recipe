@@ -1,0 +1,51 @@
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+@media (min-width: 640px) {
+  .shimmer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .shimmer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .shimmer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.shimmer-card {
+  background-color: #e5e7eb;
+  height: 192px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #e5e7eb 0%, #d1d5db 50%, #e5e7eb 100%);
+  animation: shimmer-animation 1.5s infinite linear;
+}
+
+@keyframes shimmer-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

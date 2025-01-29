@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.restaurant-car {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.restaurant-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.restaurant-card:hover {
+  transform: scale(1.05);
+}
+.restaurant-image {
+  position: relative;
+}
+
+.restaurant-image .discount {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  background-color: #e83940;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discount::before {
+  content: "🔥";
+  font-size: 16px;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.restaurant-details {
+  padding: 10px;
+  color: #696969;
+  font-size: 14px;
+}
+
+.rating {
+  background-color: #249634;
+  color: white;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.difficult {
+  background-color: whitesmoke;
+  color: dodgerblue;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.Price {
+  background-color: brown;
+  color: white;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.restaurant-name {
+  font-weight: 600;
+}
+.cuisine {
+  font-weight: 700;
+}
+.favorite-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.favorite-icon {
+  font-size: 24px;
+  color: gray;
+  transition: color 0.3s ease-in-out;
+}
+.favorite-btn:hover .favorite-icon {
+  color: red;
+}
+.favorite-btn:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 780px) {
+  .restaurant-card {
+    width: 33.3%;
+  }
+}
+
+@media (max-width: 580px) {
+  .restaurant-card {
+    width: 50%;
+  }
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.payment-btn {
+  background-color: #ff6600;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-btn:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
